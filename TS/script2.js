@@ -46,7 +46,7 @@ var myList = [25, 73, 32, 41, 19];
 var myObject = new MyClass(myList);
 console.log(myObject.print()); // [25, 73, 32, 41, 19]
 console.log(myObject.elemLength()); // 5
-console.log(myObject.elemSearch("g")); // 73
+console.log(myObject.elemSearch(2)); // 73
 myObject.elemPush(4);
 console.log(myObject.print()); // [25, 73, 32, 41, 19, 4]
 myObject.firstElemDel();
