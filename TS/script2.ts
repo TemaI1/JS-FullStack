@@ -5,17 +5,17 @@ class MyClass{
 	}
  
 	// вывод
-	print(){
+	public print(): string{
 		return this.list;
 	}
  
 	// вывод длины
-	elemLength(){
+	public elemLength(): string{
 		return this.list.length;
 	}
  
 	// поиск элемента
-	elemSearch(num: number){
+	public elemSearch(num: number){
 		for (let i = 0; i < this.list.length; i++) {
 			if (i === (num - 1)){
 				return this.list[i];
@@ -24,22 +24,22 @@ class MyClass{
 	}
  
 	// добавить элемент в конец
-	elemPush(num: number){
+	public elemPush(num: number){
 		this.list.push(num);
 	}
  
 	// удалить первый элемент
-	firstElemDel(){
+	public firstElemDel(): void{
 		this.list.shift();
 	}
  
 	// удалить последний элемент
-	lastElemDel(){
+	public lastElemDel(): void{
 		this.list.pop();
 	}
  
 	// поиск и замена элемента
-	elementRepl(num: number, newNum: number){
+	public elementRepl(num: number, newNum: number){
 		for (let i = 0; i < this.list.length; i++) {
 			if (i === (num - 1)){
 				this.list[i] = newNum;
