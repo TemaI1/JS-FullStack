@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header center">
+        <div class="header_left">
+            <img class="header_left_logo" src="img/logo.svg" alt="logo">
+            <div class="header_left_text">
+                <h2 class="header_left_text_title">Анонимный</h2>
+                <p class="header_left_text_subtitle">учебный центр</p>
+            </div>
+        </div>
+        <div class="header_right">
+            <a href="#" class="header_right_link">О нас</a>
+        </div>
+    </header>
+
+    <main class="main center">
+        <section class="main_info">
+            <h3 class="main_info_title">Регистрация на мероприятие</h3>
+            <div class="main_info_box">
+                <p class="main_info_box_title">Выберите день и время:</p>
+                <p class="main_info_box_text">подростки</p>
+                <div class="main_info_box_radio">
+                    <div class="main_info_box_radio_first">
+                        <input class="main_info_box_radio_btn" id="radio1" name="option" type="radio">
+                        <label class="main_info_box_radio_label left_radio" for="radio1">Сб 10:00</label>
+                        <p>75 мест</p>
+                    </div>
+                    <div class="main_info_box_radio_second">
+                        <input class="main_info_box_radio_btn" id="radio2" name="option" type="radio">
+                        <label class="main_info_box_radio_label right_radio" for="radio2">Вс 12:00</label>
+                        <p>70 мест</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main_data">
+            <h3 class="main_data_title">Мастер-класс 12 июня</h3>
+            <div class="main_data_fio">
+                <p class="main_data_fio_text">Фамилия</p>
+                <input class="main_data_fio_input" type="text">
+            </div>
+            <div class="main_data_name">
+                <p class="main_data_name_text">Имя</p>
+                <input class="main_data_name_input" type="text">
+            </div>
+            <div class="main_data_tel">
+                <p class="main_data_tel_text">Телефон</p>
+                <input class="main_data_tel_input" type="tel">
+            </div>
+            <div class="main_data_mail">
+                <p class="main_data_mail_text">Эл. почта</p>
+                <input class="main_data_mail_input" type="email">
+            </div>
+            <div class="main_data_date">
+                <p class="main_data_date_text">Дата рождения</p>
+                <input class="main_data_date_input" type="date">
+            </div>
+            <div class="main_data_location">
+                <input class="main_data_location_input" id="checkbox_location" type="checkbox" name="checkbox_location">
+                <label class="main_data_location_label" for="checkbox_location">Я здесь впервые</label>
+                <p class="main_data_location_text">поставьте галочку, если вы еще никогда не были на нашем курсе</p>
+            </div>
+            <div class="main_data_consent">
+                <input class="main_data_consent_input" id="checkbox_consent" type="checkbox" name="checkbox_consent">
+                <label class="main_data_consent_label" for="checkbox_consent">Я выражаю свое согласие с <span>условиями</span></label>
+            </div>
+            <p class="main_data_info">Заполните фамилию, имя, почту, телефон, дату рождения и согласие на обработку персональных данных</p>
+            <button class="main_data_btn_registration">Зарегистрироваться</button>
+        </section>
+    </main>
+
+    <footer class="footer center">
+        <p class="footer_info_organization">Анонимный учебный центр ОГРН 99999999999999, зарегестрирована в РФ, бланк №99999, дата выдачи 15.03.2024</p>
+        <p class="footer_info_policy">"Политика в отношении обработки персональных данных"</p>
+    </footer>
+
+    <section class="color_boxs center"></section>
+
+    <script src="script.js"></script>
+</body>
+</html>

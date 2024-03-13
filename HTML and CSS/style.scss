@@ -1,0 +1,290 @@
+@import 'vars';
+@import 'mixins';
+@import 'operations';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+body{
+    font-family: "Open Sans", sans-serif;
+    color: $accentColor;
+}
+
+.center{
+    padding-left: calc(50% - 400px);
+    padding-right: calc(50% - 400px);
+}
+
+.header{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_left{
+        @include centerFlex();
+        gap: 10px;
+
+        &_logo{
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    &_right{
+       &_link{
+        text-decoration: none;
+        padding: 10px 20px;
+        border: 1px solid $accentColor;
+        color: $accentColor;
+        border-radius: 5px;
+       } 
+    }
+}
+
+.main{
+    margin-top: 40px;
+
+    &_info{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &_title{
+            font-size: 30px;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        &_box{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            &_text{
+                width: 200px;
+                text-align: end;
+                font-size: 20px;
+                font-weight: bold;
+                color: $mainColor;
+                text-shadow: 1px 1px 2px black;
+            }
+
+            &_radio{
+                display: flex;
+
+                &_btn{
+                    display: none;
+                }
+
+                &_btn:checked + .main_info_box_radio_label{
+                    background-color: $mainColor;
+                }
+
+                &_label{
+                    padding: 10px 20px;
+                    border: 1px solid $accentColor;
+                    color: $accentColor;
+                    cursor: pointer;
+                }
+
+                &_first{
+                    @include centerFlex();
+                    flex-direction: column;
+                    gap: 3px;
+                }
+
+                &_second{
+                    @include centerFlex();
+                    flex-direction: column;
+                    gap: 3px;
+                }
+            }
+
+            &_radio .left_radio{
+                border-radius: 5px 0 0 5px;
+            }
+
+            &_radio .right_radio{
+                border-radius: 0 5px 5px 0;
+            }
+        }
+    }
+
+    &_data{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &_fio{
+            display: flex;
+            align-items: center;
+
+            &_text{
+                width: 150px;
+            }
+
+            &_input{
+                padding: 3px;
+                width: 350px;
+            }
+        }
+
+        &_name{
+            display: flex;
+            align-items: center;
+
+            &_text{
+                width: 150px;
+            }
+
+            &_input{
+                padding: 3px;
+                width: 350px;
+            }
+        }
+
+        &_tel{
+            display: flex;
+            align-items: center;
+            
+            &_text{
+                width: 150px;
+            }
+
+            &_input{
+                padding: 3px;
+                width: 200px;
+            }
+        }
+
+        &_mail{
+            display: flex;
+            align-items: center;
+
+            &_text{
+                width: 150px;
+            }
+
+            &_input{
+                padding: 3px;
+                width: 200px;
+            }
+        }
+
+        &_date{
+            display: flex;
+            align-items: center;
+
+            &_text{
+                width: 150px;
+            }
+
+            &_input{
+                padding: 3px;
+                width: 200px;
+            }
+        }
+
+        &_location{
+            &_text{
+                color: $secondAccentColor;
+                font-size: 11px;
+            }
+        }
+
+        &_consent span{
+            color: $mainColor;
+            cursor: pointer;
+        }
+
+        &_info{
+            color: $secondAccentColor;
+            font-size: 13px;
+        }
+
+        &_btn_registration{
+            width: 200px;
+            padding: 15px;
+            background-color: $mainColor;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        &_btn_registration:hover{
+            opacity: 0.85;
+        }
+    }
+}
+
+.footer{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &_info_organization{
+        color: $secondAccentColor;
+        font-size: 13px;
+    }
+
+    &_info_policy{
+        color: $mainColor;
+        font-size: 11px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .center{
+        padding-left: calc(50% - 300px);
+        padding-right: calc(50% - 300px);
+    }
+    .main_info_title{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .center{
+        padding-left: calc(50% - 200px);
+        padding-right: calc(50% - 200px);
+    }
+    .main_data_name_input, .main_data_fio_input{
+        width: 230px;
+    }
+}
+
+@media (max-width: 425px){
+    .center{
+        padding-left: calc(50% - 180px);
+        padding-right: calc(50% - 180px);
+    }
+    .header_right_link{
+        padding: 5px 10px;
+    }
+    .main_info_title{
+        font-size: 18px;
+    }
+    .main_info_box_text{
+        width: 170px;
+    }
+    .main_info_box_radio_label {
+        padding: 5px 10px;
+    }
+    .main_data_name_input, .main_data_fio_input, .main_data_tel_input, .main_data_mail_input, .main_data_date_input{
+        width: 160px;
+    }
+}
+
+@media (max-width: 425px){
+    .center{
+        padding-left: calc(50% - 150px);
+        padding-right: calc(50% - 150px);
+    }
+}
