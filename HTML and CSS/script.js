@@ -1,4 +1,4 @@
-const boxs = document.querySelector(".color_boxs");
+const boxs = document.querySelector(".color-boxs");
 
 boxs.style.display = "flex";
 boxs.style.gap = "2px";
