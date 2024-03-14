@@ -23,18 +23,18 @@ body{
     justify-content: space-between;
     align-items: center;
 
-    &_left{
+    &-left{
         @include centerFlex();
         gap: 10px;
 
-        &_logo{
+        &-logo{
             width: 60px;
             height: 60px;
         }
     }
 
-    &_right{
-       &_link{
+    &-right{
+       &-link{
         text-decoration: none;
         padding: 10px 20px;
         border: 1px solid $accentColor;
@@ -47,23 +47,23 @@ body{
 .main{
     margin-top: 40px;
 
-    &_info{
+    &-info{
         display: flex;
         flex-direction: column;
         gap: 10px;
 
-        &_title{
+        &-title{
             font-size: 30px;
             font-weight: 300;
             font-style: italic;
         }
 
-        &_box{
+        &-box{
             display: flex;
             flex-direction: column;
             gap: 10px;
 
-            &_text{
+            &-text{
                 width: 200px;
                 text-align: end;
                 font-size: 20px;
@@ -72,141 +72,141 @@ body{
                 text-shadow: 1px 1px 2px black;
             }
 
-            &_radio{
+            &-radio{
                 display: flex;
 
-                &_btn{
+                &-btn{
                     display: none;
                 }
 
-                &_btn:checked + .main_info_box_radio_label{
+                &-btn:checked + .main-info-box-radio-label{
                     background-color: $mainColor;
                 }
 
-                &_label{
+                &-label{
                     padding: 10px 20px;
                     border: 1px solid $accentColor;
                     color: $accentColor;
                     cursor: pointer;
                 }
 
-                &_first{
+                &-first{
                     @include centerFlex();
                     flex-direction: column;
                     gap: 3px;
                 }
 
-                &_second{
+                &-second{
                     @include centerFlex();
                     flex-direction: column;
                     gap: 3px;
                 }
             }
 
-            &_radio .left_radio{
+            &-radio .left-radio{
                 border-radius: 5px 0 0 5px;
             }
 
-            &_radio .right_radio{
+            &-radio .right-radio{
                 border-radius: 0 5px 5px 0;
             }
         }
     }
 
-    &_data{
+    &-data{
         margin-top: 40px;
         display: flex;
         flex-direction: column;
         gap: 20px;
 
-        &_fio{
+        &-fio{
             display: flex;
             align-items: center;
 
-            &_text{
+            &-text{
                 width: 150px;
             }
 
-            &_input{
+            &-input{
                 padding: 3px;
                 width: 350px;
             }
         }
 
-        &_name{
+        &-name{
             display: flex;
             align-items: center;
 
-            &_text{
+            &-text{
                 width: 150px;
             }
 
-            &_input{
+            &-input{
                 padding: 3px;
                 width: 350px;
             }
         }
 
-        &_tel{
+        &-tel{
             display: flex;
             align-items: center;
             
-            &_text{
+            &-text{
                 width: 150px;
             }
 
-            &_input{
+            &-input{
                 padding: 3px;
                 width: 200px;
             }
         }
 
-        &_mail{
+        &-mail{
             display: flex;
             align-items: center;
 
-            &_text{
+            &-text{
                 width: 150px;
             }
 
-            &_input{
+            &-input{
                 padding: 3px;
                 width: 200px;
             }
         }
 
-        &_date{
+        &-date{
             display: flex;
             align-items: center;
 
-            &_text{
+            &-text{
                 width: 150px;
             }
 
-            &_input{
+            &-input{
                 padding: 3px;
                 width: 200px;
             }
         }
 
-        &_location{
-            &_text{
+        &-location{
+            &-text{
                 color: $secondAccentColor;
                 font-size: 11px;
             }
         }
 
-        &_consent span{
+        &-consent span{
             color: $mainColor;
             cursor: pointer;
         }
 
-        &_info{
+        &-info{
             color: $secondAccentColor;
             font-size: 13px;
         }
 
-        &_btn_registration{
+        &-btn-registration{
             width: 200px;
             padding: 15px;
             background-color: $mainColor;
@@ -216,7 +216,7 @@ body{
             cursor: pointer;
         }
 
-        &_btn_registration:hover{
+        &-btn-registration:hover{
             opacity: 0.85;
         }
     }
@@ -228,12 +228,12 @@ body{
     flex-direction: column;
     gap: 10px;
 
-    &_info_organization{
+    &-info-organization{
         color: $secondAccentColor;
         font-size: 13px;
     }
 
-    &_info_policy{
+    &-info-policy{
         color: $mainColor;
         font-size: 11px;
     }
@@ -245,7 +245,7 @@ body{
         padding-left: calc(50% - 300px);
         padding-right: calc(50% - 300px);
     }
-    .main_info_title{
+    .main-info-title{
         font-size: 24px;
     }
 }
@@ -255,7 +255,7 @@ body{
         padding-left: calc(50% - 200px);
         padding-right: calc(50% - 200px);
     }
-    .main_data_name_input, .main_data_fio_input{
+    .main-data-name-input, .main-data-fio-input{
         width: 230px;
     }
 }
@@ -265,19 +265,19 @@ body{
         padding-left: calc(50% - 180px);
         padding-right: calc(50% - 180px);
     }
-    .header_right_link{
+    .header-right-link{
         padding: 5px 10px;
     }
-    .main_info_title{
+    .main-info-title{
         font-size: 18px;
     }
-    .main_info_box_text{
+    .main-info-box-text{
         width: 170px;
     }
-    .main_info_box_radio_label {
+    .main-info-box-radio-label {
         padding: 5px 10px;
     }
-    .main_data_name_input, .main_data_fio_input, .main_data_tel_input, .main_data_mail_input, .main_data_date_input{
+    .main-data-name-input, .main-data-fio-input, .main-data-tel-input, .main-data-mail-input, .main-data-date-input{
         width: 160px;
     }
 }
